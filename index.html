@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="./img/FavIcon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/74d782535f.js" crossorigin="anonymous"></script>
+    <title>SeventyFiveStore</title>
+</head>
+
+<body>
+    <!-- navbar - inicia -->
+    <nav class="navbar  navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="./index.html" class="logo ">
+            <img src="./img/LogoNav.png" alt="logo empresa" />
+        </a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Destacados<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Hombre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Mujer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Accesorios</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-sm-6">
+                <input class="form-control mr-md-2" type="search" placeholder="Buscar" aria-label="Buscar" />
+                <button class="favbutton"><img src="./img/buttonlogo1.png" alt=""></button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- navbar - fin -->
+    <main class="container-fluid">
+        <!-- <section class="HomeBanner">
+            <div class="Bannerimg">
+                <video id="videoPlayer" style= "margin-bottom:15px;" autoplay muted height="700px" src="./img/videobanner.mp4"></video>
+                <div class="volume-control">
+                    <input type="range" id="volumeRange" min="0" max="1" step="0.1" value="0" />
+                    <i class="fas fa-volume-mute" onclick="toggleMute()" id="volumeIcon"></i>
+                </div>
+            </div>
+            <h1>Golden State Warriors</h1>
+            <h2>2023</h2>
+            <button class="buybutton">
+                Comprar
+            </button>
+        </section> -->
+        <section class="Novedades container-fluid">
+            <h2
+                style="font-size: 23px;font-weight: 500;font-family: 'Bebas Neue', sans-serif;text-transform: capitalize;">
+                Novedades</h2>
+            <div class="row justify-content-center">
+                <div class="nov1 col-xl-6 col-lg-12">
+                    <div class="nov1img">
+                        <img src="./img/zapa1.png" alt="">
+                    </div>
+                    <h3>LeBron NXXT Gen</h3>
+                    <button class="buybutton">
+                        Comprar
+                    </button>
+                </div>
+                <div class="nov2 col-xl-6 col-lg-12">
+                    <div class="nov2img">
+                        <img src="./img/pelota1.png" alt="">
+                    </div>
+                    <h3>Spalding Varsity Tf 150</h3>
+                    <button class="buybutton">
+                        Comprar
+                    </button>
+                </div>
+            </div>
+        </section>
+        <div class="container-fluid">
+            <h2  
+                style="font-size: 23px;font-weight: 500;font-family: 'Bebas Neue', sans-serif;text-transform: capitalize; margin: 0px 0px 15px 0px;">
+                Productos Destacados
+            </h2>
+
+            <div style="margin-bottom: 200px;" class="row justify-content-center">
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="proddest">
+                        <div class="card" style="width: 19rem;">
+                            <img src="./img/camiseta1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p style="margin: 0; font-weight: 550;"> 
+                                    $16.999
+                                </p>
+                                <p class="card-text">Remera Nike Los Angeles Lakers - Unisex - .</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="proddest">
+                        <div class="card" style="width: 19rem;">
+                            <img src="./img/short1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p style="margin: 0; font-weight: 550;">
+                                    $15.399
+                                </p>
+                                <p class="card-text">Short Nike Miami Heat Swingman - Hombre - .</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="proddest">
+                        <div class="card" style="width: 19rem;">
+                            <img src="./img/campera1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p style="margin: 0; font-weight: 550;">
+                                    $32.700
+                                </p>
+                                <p class="card-text">Campera Nike Thermaflex Milwaukee Bucks - Hombre - .</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="proddest">
+                        <div class="card" style="width: 19rem;">
+                            <img src="./img/buzo1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p style="margin: 0; font-weight: 550;">
+                                    $49.999
+                                </p>
+                                <p class="card-text">Buzo Adidas ONE Basketball Halo Green - Unisex -.</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footerdiv">
+            <h3 style="color: white;">holas</h3> 
+        </div>
+    </footer>
+
+    <script>
+
+        // Obtener referencia al elemento de video
+        const videoPlayer = document.getElementById("videoPlayer");
+
+    
+        // Obtener referencia al rango de volumen
+        const volumeRange = document.getElementById("volumeRange");
+    
+        // Función para ajustar el volumen del video
+        function adjustVolume() {
+            videoPlayer.volume = volumeRange.value;
+        }
+
+        // Establecer el volumen inicial al 20% cuando se haya cargado la metadata del video
+    videoPlayer.addEventListener("loadedmetadata", function() {
+        videoPlayer.volume = 0.2;
+        volumeRange.value = 0;
+    });
+    
+    function toggleMute() {
+    var volumeIcon = document.getElementById("volumeIcon");
+    if (volumeIcon.classList.contains("fa-volume-mute")) {
+        volumeIcon.classList.remove("fa-volume-mute");
+        volumeIcon.classList.add("fa-volume-up");
+        volumeRange.value = 0.2; // Establecer valor de la barra de volumen al 0.2
+        videoPlayer.muted = false; // Desmutea el video
+    } else {
+        volumeIcon.classList.remove("fa-volume-up");
+        volumeIcon.classList.add("fa-volume-mute");
+        volumeRange.value = 0; // Establecer valor de la barra de volumen a 0
+        videoPlayer.muted = true; // Mutea el video
+    }
+
+}
+
+    // Agregar evento de cambio al rango de volumen
+    volumeRange.addEventListener("input", adjustVolume);
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
