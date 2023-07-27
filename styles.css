@@ -1,18 +1,13 @@
-*{
+/* *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     text-decoration: none !important;
-}
-
-/* @font-face {
-    font-family: 'Franklin Gothic Demi Cond Regular';
-    src: url('fonts/Franklin Gothic Demi Cond Regular.ttf') format('truetype');
 } */
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-body {
+.body {
     background-color: white;
 }
 
@@ -79,18 +74,18 @@ body {
 
 h1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 900;
+    font-weight: 530;
     text-transform: uppercase;
-    font-size: 60px;
+    font-size: 80px;
     color: #161A1D;
     margin: 0;
 }
 
 h2{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 1200;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 600;
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 35px;
     color: #161A1D;
 }
 
@@ -119,6 +114,10 @@ h2{
     font-size: 13px;
     font-weight: 620;
     border: 0;
+}
+
+.buybutton a{
+    color: white;
 }
 
 .buybutton:hover{
@@ -426,3 +425,129 @@ h2{
 
 
 /* COMENTARIO PARA SABER SI TA TODO OK EN GITHUB */
+
+
+
+.dest{
+    height: 1150px;
+    display: flex;
+}
+
+.prod1{
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 450px 450px ;
+    grid-template-areas:
+        "foto1 foto2 "
+        "foto3 foto4 "
+    ;
+    grid-gap: 2px;
+}
+
+.prod2{
+    padding-top: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.prod2 h2{
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.prod2 h3{
+    font-weight: lighter;
+    font-size: 17px;
+    padding-bottom: 5px;
+}
+.prod2 h5{
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+
+.foto1{
+    background-image: url(./img/lebron1.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+
+.foto2{
+    background-image: url(./img/lebron2.jpg);
+    background-size:cover;
+    height: 100%;
+    width: 100%;
+}
+.foto3{
+    background-image: url(./img/lebron3.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.foto4{
+    background-image: url(./img/lebron4.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.selectsize{
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    grid-template-rows: 60px 60px ;
+    grid-template-areas:
+        "size1 size2 size3 size4 size5 "
+        "size6 size7 size8 size9 size10 "
+    ;
+    grid-gap: 10px;
+    text-align: center;
+    padding-right: 90px;  
+    padding-bottom: 20px;
+}
+
+.size1, .size2, .size3{
+    background-color: #f5f3f4d8;
+    border-radius: 13px;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    
+}
+
+.size4, .size5{
+    background-color: #d3d0d2d8;
+    border-radius: 13px;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+}
+.size6, .size7, .size8, .size9, .size10{
+    background-color: #d3d0d2d8;
+    border-radius: 13px;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+}
+
+.sold{
+    color: #adabadd8;
+}
+
+
+.buybuttonprod{
+    
+    background-color: #161A1D;;
+    color: white;
+    padding: 12px 70px 12px 70px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 620;
+    border: 0;
+    margin-bottom: 50px;
+}
+
+.resumenprod{
+    padding-right: 80px;
+}

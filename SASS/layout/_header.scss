@@ -1,0 +1,82 @@
+body {
+    background-color: white;
+}
+
+
+.navbar {
+    padding: 0 !important;
+    padding: 8px 30px 5px 30px !important;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo img {
+    height: 55px !important;
+}
+
+.form-control {
+    border-radius: 15px !important;
+    height: 33px;
+    background-color: #f5f3f4d8;
+
+    &:focus {
+        outline: none !important;
+        box-shadow: none !important;
+        border-color: rgba(0, 0, 0, 0.342) !important;
+        background-color: #f5f3f4d8;
+    }
+    
+}
+
+
+
+
+.favbutton {
+    background-color: transparent;
+    /* margin-top: 20px; */
+    margin-left: 10px;
+    border-radius: 7px;
+    padding: 3px;
+    border: 0;
+
+    img {
+        height: 25px;
+    }
+}
+
+.HomeBanner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 900;
+    margin-top: 50px;
+
+    
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 530;
+    text-transform: uppercase;
+    font-size: 80px;
+    color: #161A1D;
+    margin: 0;
+}
+
+h2{
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 35px;
+    color: #161A1D;
+}
+
+}
+
+
