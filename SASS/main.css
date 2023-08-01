@@ -32,6 +32,7 @@ body {
 
 .logo img {
   height: 55px !important;
+  margin-right: 90px !important;
 }
 
 .form-control {
@@ -44,6 +45,10 @@ body {
   box-shadow: none !important;
   border-color: rgba(0, 0, 0, 0.342) !important;
   background-color: rgba(245, 243, 244, 0.8470588235);
+}
+
+.form-inline {
+  padding-left: 90px !important;
 }
 
 .favbutton {
@@ -85,7 +90,6 @@ body {
 
 .publi {
   margin-top: 15px;
-  background-color: aqua;
   width: 100%;
   height: 250px;
   background-size: cover;
@@ -94,9 +98,9 @@ body {
 
 .volume-control {
   position: absolute;
-  top: 40px; /* Puedes ajustar esta posición según tus preferencias */
-  left: 520px; /* Puedes ajustar esta posición según tus preferencias */
-  z-index: 1; /* Asegura que la barra esté encima del video */
+  top: 40px;
+  left: 20px;
+  z-index: 1;
 }
 
 .fa-volume-mute {
@@ -105,6 +109,48 @@ body {
 
 .fa-volume-up {
   color: rgb(255, 255, 255);
+}
+
+/* Estilo para cada resultado de búsqueda */
+.resultado-item {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  background-color: #f8f8f8;
+  display: flex;
+  align-items: center;
+}
+.resultado-item:hover {
+  filter: contrast(110%);
+}
+
+/* Estilo para el contenedor de los resultados de búsqueda */
+.resultados-busqueda {
+  position: absolute;
+  width: 100%;
+  z-index: 9999;
+}
+.resultados-busqueda:hover {
+  cursor: pointer;
+}
+
+.foto-elemento {
+  width: 120px;
+  height: 70px;
+  background-size: cover;
+  background-position: center;
+  margin-right: 10px;
+}
+
+/* Estilos para el contenedor de la información del producto */
+.info-elemento {
+  display: flex;
+  flex-direction: column; /* Hace que los elementos hijos se muestren uno debajo del otro */
+  flex: 1; /* Hace que el contenedor ocupe todo el espacio disponible */
+}
+
+.precio-elemento {
+  font-weight: 700;
 }
 
 .nov1 {
@@ -209,6 +255,11 @@ body {
 
 .card {
   border: 1 !important;
+}
+
+.volume-control {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .volume-control:hover {
@@ -382,7 +433,7 @@ body {
 }
 .prod2 h5 {
   font-weight: lighter;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .foto1 {
@@ -411,8 +462,8 @@ body {
 
 .selectsize {
   display: grid;
-  grid-template-columns: repeat(5, 2fr);
-  grid-template-rows: 60px 60px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 40px 40px;
   grid-template-areas: "size1 size2 size3 size4 size5 " "size6 size7 size8 size9 size10 ";
   grid-gap: 10px;
   text-align: center;
@@ -446,6 +497,7 @@ body {
 
 .sold {
   color: rgba(173, 171, 173, 0.8470588235);
+  background-color: rgba(211, 208, 210, 0.8470588235);
 }
 
 .buybuttonprod {

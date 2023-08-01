@@ -36,10 +36,13 @@
                     <a class="nav-link" href="#">Accesorios</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-sm-6">
-                <input class="form-control mr-md-2" type="search" placeholder="Buscar" aria-label="Buscar" />
-                <button class="favbutton"><img src="./img/buttonlogo1.png" alt=""></button>
-            </form>
+            <div style="position: relative;">
+                <form class="form-inline my-2 my-sm-6">
+                    <input class="form-control mr-md-2" type="search" placeholder="Buscar" aria-label="Buscar" id="buscarInput" />
+                </form>
+                <div id="resultadosBusquedaDiv" class="resultados-busqueda" style="position: absolute; top: 100%; left: 0; z-index: 999; background-color: rgba(255, 255, 255, 0.555); width: 300px; display: none;"></div>
+            </div>
+            <button class="favbutton"><img src="./img/bag.svg" alt=""></button>
         </div>
     </nav>
 
@@ -65,25 +68,25 @@
                 Novedades</h2>
             <div class="row justify-content-center">
                 <div class="nov1 col-xl-6 col-lg-12">
-                    <div class="nov1img">
-                        <a href="./paginas complementarias/Producto1.html">
+                    <a href="./vistas/Producto1.html">
+                        <div class="nov1img">
                             <img src="./img/zapa1.png" alt="">
-                        </a>
-                    </div>
+                        </div>
+                    </a>
                     <h3>LeBron NXXT Gen</h3>
                     <button class="buybutton" >
-                        <a href="./paginas complementarias/Producto1.html">Comprar</a>
+                        <a href="./vistas/Producto1.html">Comprar</a>
                     </button>
                 </div>
                 <div class="nov2 col-xl-6 col-lg-12">
-                    <div class="nov2img">
-                        <a href="./paginas complementarias/Producto2.html"></a>
+                    <a href="./vistas/Producto2.html">
+                        <div class="nov2img">
                             <img src="./img/pelota1.png" alt="">
-                        </a>
-                    </div>
+                        </div>
+                    </a>
                     <h3>Spalding Varsity Tf 150</h3>
                     <button class="buybutton">
-                        <a href="./paginas complementarias/Producto2.html">Comprar</a>
+                        <a href="./vistas/Producto2.html">Comprar</a>
                     </button>
                 </div>
             </div>
@@ -97,56 +100,64 @@
             <div style="margin-bottom: 200px;" class="row justify-content-center">
                 <div class="col-xl-3 col-lg-4 col-md-6">
                     <div class="proddest">
-                        <div class="card" style="width: 19rem;">
-                            <img src="./img/camiseta1.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p style="margin: 0; font-weight: 550;"> 
-                                    $16.999
-                                </p>
-                                <p class="card-text">Remera Nike Los Angeles Lakers - Unisex - .</p>
+                        <a style="color: black;" href="./vistas/Producto3.html">
+                            <div class="card" style="width: 19rem;">
+                                <img src="./img/camiseta1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p style="margin: 0; font-weight: 550;"> 
+                                        $16.999
+                                    </p>
+                                    <p class="card-text">Remera Nike Los Angeles Lakers - Unisex - .</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6">
                     <div class="proddest">
-                        <div class="card" style="width: 19rem;">
-                            <img src="./img/short1.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p style="margin: 0; font-weight: 550;">
-                                    $15.399
-                                </p>
-                                <p class="card-text">Short Nike Miami Heat Swingman - Hombre - .</p>
+                        <a style="color: black;" href="./vistas/Producto4.html">
+                            <div class="card" style="width: 19rem;">
+                                <img src="./img/short1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p style="margin: 0; font-weight: 550;">
+                                        $15.399
+                                    </p>
+                                    <p class="card-text">Short Nike Miami Heat Swingman - Hombre - .</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6">
                     <div class="proddest">
-                        <div class="card" style="width: 19rem;">
-                            <img src="./img/campera1.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p style="margin: 0; font-weight: 550;">
-                                    $32.700
-                                </p>
-                                <p class="card-text">Campera Nike Thermaflex Milwaukee Bucks - Hombre - .</p>
-                                
+                        <a style="color: black;" href="./vistas/Producto5.html">
+                            <div class="card" style="width: 19rem;">
+                                <img src="./img/campera1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p style="margin: 0; font-weight: 550;">
+                                        $32.700
+                                    </p>
+                                    <p class="card-text">Campera Nike Thermaflex Milwaukee Bucks - Hombre - .</p>
+                                    
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6">
                     <div class="proddest">
-                        <div class="card" style="width: 19rem;">
-                            <img src="./img/buzo1.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p style="margin: 0; font-weight: 550;">
-                                    $49.999
-                                </p>
-                                <p class="card-text">Buzo Adidas ONE Basketball Halo Green - Unisex -.</p>
-                                
+                        <a style="color: black;" href="./vistas/Producto6.html">
+                            <div class="card" style="width: 19rem;">
+                                <img src="./img/buzo1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p style="margin: 0; font-weight: 550;">
+                                        $49.999
+                                    </p>
+                                    <p class="card-text">Buzo Adidas ONE Basketball Halo Green - Unisex -.</p>
+                                    
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -158,46 +169,8 @@
         </div>
     </footer>
 
-    <script>
-
-        // Obtener referencia al elemento de video
-        const videoPlayer = document.getElementById("videoPlayer");
-
-    
-        // Obtener referencia al rango de volumen
-        const volumeRange = document.getElementById("volumeRange");
-    
-        // Función para ajustar el volumen del video
-        function adjustVolume() {
-            videoPlayer.volume = volumeRange.value;
-        }
-
-        // Establecer el volumen inicial al 20% cuando se haya cargado la metadata del video
-    videoPlayer.addEventListener("loadedmetadata", function() {
-        videoPlayer.volume = 0.2;
-        volumeRange.value = 0;
-    });
-    
-    function toggleMute() {
-    var volumeIcon = document.getElementById("volumeIcon");
-    if (volumeIcon.classList.contains("fa-volume-mute")) {
-        volumeIcon.classList.remove("fa-volume-mute");
-        volumeIcon.classList.add("fa-volume-up");
-        volumeRange.value = 0.2; // Establecer valor de la barra de volumen al 0.2
-        videoPlayer.muted = false; // Desmutea el video
-    } else {
-        volumeIcon.classList.remove("fa-volume-up");
-        volumeIcon.classList.add("fa-volume-mute");
-        volumeRange.value = 0; // Establecer valor de la barra de volumen a 0
-        videoPlayer.muted = true; // Mutea el video
-    }
-
-}
-
-    // Agregar evento de cambio al rango de volumen
-    volumeRange.addEventListener("input", adjustVolume);
-    </script>
-
+    <!--JS main-->
+    <script src="./JS/main.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
