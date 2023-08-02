@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +9,7 @@
     <link rel="shortcut icon" href="../img/FavIcon.png" type="image/x-icon" />
     <link rel="stylesheet" href="../SASS/main.css" />
     <script src="https://kit.fontawesome.com/74d782535f.js" crossorigin="anonymous"></script>
-    <title>Remera L.A Lakers</title>
+    <title>SeventyFiveStore</title>
 </head>
 
 <body>
@@ -38,71 +39,72 @@
             </ul>
             <div style="position: relative;">
                 <form class="form-inline my-2 my-sm-6">
-                    <input class="form-control mr-md-2" type="search" placeholder="Buscar" aria-label="Buscar" id="buscarInput" />
+                    <input class="form-control mr-md-2" type="search" placeholder="Buscar" aria-label="Buscar"
+                        id="buscarInput" />
                 </form>
-                <div id="resultadosBusquedaDiv" class="resultados-busqueda" style="position: absolute; top: 100%; left: 0; z-index: 999; background-color: rgba(255, 255, 255, 0.555); width: 300px; display: none;"></div>
+                <div id="resultadosBusquedaDiv" class="resultados-busqueda"
+                    style="position: absolute; top: 100%; left: 0; z-index: 999; background-color: rgba(255, 255, 255, 0.555); width: 300px; display: none;">
+                </div>
             </div>
             <a href="../vistas/Carrito.html">
-                <button class="favbutton"><img src="../img/bag.svg" alt=""></button>
+                <button id="cartbutton" class="favbutton"><img src="../img/bag.svg" alt=""></button>
             </a>
         </div>
     </nav>
 
     <!-- navbar - fin -->
-    <main class="container-fluid">
-
-        <div class="dest">
-            <div class="prod1 col-7">
-                <div class="foto1" style=" background-image: url(../img/camiseta1C.jpg);">
-                    
-                </div>
-                <div class="foto1" style=" background-image: url(../img/camiseta1A.jpg);">
-
-                </div>
-                <div class="foto1" style=" background-image: url(../img/camiseta1D.jpg);">
-
-                </div>
-                <div class="foto1" style=" background-image: url(../img/camiseta1B.jpg);">
-
-                </div>
-                
+    <main class="carritomain container">
+        <div class="carrito-title">
+            <div>
+                <h2>TU CARRITO</h2>
+                <p class="preciofinal">$50000</p>
             </div>
-            <div class="prod2 col-5">
-                <h2>Remera Nike Los Angeles Lakers</h2>
-                <h3>Camiseta Nike Dri-Fit L.A</h3>
-                <h2 style="font-size: 20px;">$16999</h2>
-                <div class="selectsize">
-                    <div class="size1">
-                        <h5>XS</h5>
-                    </div>
-                    <div class="size2 sold">
-                        <h5>S</h5>
-                    </div>
-                    <div class="size3 sold"">
-                        <h5>M</h5>
-                    </div>
-                    <div class="size4 sold">
-                        <h5>L</h5>
-                    </div>
-                    <div class="size5 sold">
-                        <h5>XL</h5>
-                    </div>
-                    <div class="size6 sold">
-                        <h5>XXL</h5>
-                    </div>
-                </div>
-                <button class="buybuttonprod" data-id="3">
-                    Agregar al carrito
+            <div>
+                <button class="buybutton" style="padding-right: 20px;">
+                    IR A PAGAR 
+                    <svg style="margin-bottom:3px;margin-left:60px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                    </svg>
                 </button>
-                <div class="resumenprod">
-                    <p style="font-weight: lighter;">
-                        Vestite de tu equipo favorito con la Remera Nike Los Angeles Lakers. Una prenda hecha para llevar la historia de uno de los clubes con más historia a tus paridos. La confección en un poliéster liviano con tecnología Dri-Fit mantiene la comodidad que buscabas para todo el día. con un diseño que te hará sentir un jugador estrella. ¿Qué esperas para tenerla en tu ropero?
-                    </p>
+            </div>
+            
+        </div>
+        <div class="carritodiv">
 
+            <div class="carrito-items col-8" style="padding: 0;">
+                <div class="producto-item">
+                    <div class="producto-foto">
+                        <img src="../img/buzo1.jpg" alt="">
+                    </div>
+                    <div class="producto-data">
+                        <p>
+                            BUZO CON CAPUCHA ADIDAS ONE BASKETBALL
+                            HALO GREEN/HALO GREEN
+                        </p>
+                        <p>
+                            TAMAÑO : XS
+                        </p>
+                    </div>
+                    <div class="producto-precio">
+                        <div style="display: flex;">
+                            <p>$49999</p>
+                            <button type="button" class="btn">
+                                <img src="../img/x-lg.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="carrito-pago col-4" style="padding: 0;">
+                <h3>RESUMEN DEL PEDIDO</h3>
+                <p>1 Productos </p>
+                <h2>TOTAL : $49999</h2>
+                <p style="font-size: 13px;margin-bottom: 5px;margin-top:30px ;font-weight: lighter; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trzebuchet MS', sans-serif;">OPCIONES DE PAGO</p>
+                <img src="../img/metodospago.jpg" alt="">
+            </div>
+
         </div>
-        
+
     </main>
     <footer>
         <div class="footerdiv">
@@ -111,7 +113,6 @@
 
     <!--JS main-->
     <script src="../JS/productos.js"></script>
-
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">

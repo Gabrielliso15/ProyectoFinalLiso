@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="../img/FavIcon.png" type="image/x-icon" />
     <link rel="stylesheet" href="../SASS/main.css" />
     <script src="https://kit.fontawesome.com/74d782535f.js" crossorigin="anonymous"></script>
-    <title>Producto1</title>
+    <title>Nike Lebron NXXT Gen</title>
 </head>
 
 <body>
@@ -42,7 +42,9 @@
                 </form>
                 <div id="resultadosBusquedaDiv" class="resultados-busqueda" style="position: absolute; top: 100%; left: 0; z-index: 999; background-color: rgba(255, 255, 255, 0.555); width: 300px; display: none;"></div>
             </div>
-            <button class="favbutton"><img src="../img/bag.svg" alt=""></button>
+            <a href="../vistas/Carrito.html">
+                <button class="favbutton"><img src="../img/bag.svg" alt=""></button>
+            </a>
         </div>
     </nav>
 
@@ -104,7 +106,7 @@
                         <h5>15</h5>
                     </div>
                 </div>
-                <button class="buybuttonprod">
+                <button class="buybuttonprod"data-id="1">
                     Agregar al carrito
                 </button>
                 <div class="resumenprod">
@@ -119,12 +121,11 @@
     </main>
     <footer>
         <div class="footerdiv">
-            <h3 style="color: white;">holas</h3> 
         </div>
     </footer>
 
     <!--JS main-->
-    <script src="../JS/main.js"></script>
+    <script src="../JS/productos.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">

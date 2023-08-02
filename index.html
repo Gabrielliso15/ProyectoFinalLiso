@@ -42,7 +42,10 @@
                 </form>
                 <div id="resultadosBusquedaDiv" class="resultados-busqueda" style="position: absolute; top: 100%; left: 0; z-index: 999; background-color: rgba(255, 255, 255, 0.555); width: 300px; display: none;"></div>
             </div>
-            <button class="favbutton"><img src="./img/bag.svg" alt=""></button>
+            <a href="./vistas/Carrito.html">
+                <button class="favbutton"><img src="./img/bag.svg" alt=""></button>
+            </a>
+            
         </div>
     </nav>
 
@@ -97,80 +100,21 @@
                 Productos Destacados
             </h2>
 
-            <div style="margin-bottom: 200px;" class="row justify-content-center">
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="proddest">
-                        <a style="color: black;" href="./vistas/Producto3.html">
-                            <div class="card" style="width: 19rem;">
-                                <img src="./img/camiseta1.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p style="margin: 0; font-weight: 550;"> 
-                                        $16.999
-                                    </p>
-                                    <p class="card-text">Remera Nike Los Angeles Lakers - Unisex - .</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="proddest">
-                        <a style="color: black;" href="./vistas/Producto4.html">
-                            <div class="card" style="width: 19rem;">
-                                <img src="./img/short1.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p style="margin: 0; font-weight: 550;">
-                                        $15.399
-                                    </p>
-                                    <p class="card-text">Short Nike Miami Heat Swingman - Hombre - .</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="proddest">
-                        <a style="color: black;" href="./vistas/Producto5.html">
-                            <div class="card" style="width: 19rem;">
-                                <img src="./img/campera1.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p style="margin: 0; font-weight: 550;">
-                                        $32.700
-                                    </p>
-                                    <p class="card-text">Campera Nike Thermaflex Milwaukee Bucks - Hombre - .</p>
-                                    
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="proddest">
-                        <a style="color: black;" href="./vistas/Producto6.html">
-                            <div class="card" style="width: 19rem;">
-                                <img src="./img/buzo1.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p style="margin: 0; font-weight: 550;">
-                                        $49.999
-                                    </p>
-                                    <p class="card-text">Buzo Adidas ONE Basketball Halo Green - Unisex -.</p>
-                                    
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+            <div id="contenedor-productos" style="margin-bottom: 200px;" class="row justify-content-center">
+                <!-- A completar con js -->
             </div>
         </div>
     </main>
     <footer>
         <div class="footerdiv">
-            <h3 style="color: white;">holas</h3> 
+            
         </div>
     </footer>
 
     <!--JS main-->
     <script src="./JS/main.js"></script>
+    <!--JS asociado a los productos-->
+    <script src="../JS/productos.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">

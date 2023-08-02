@@ -3,38 +3,38 @@
         "nombre": "Zapatillas Nike LeBron NXXT Gen",
         "precio": 88000,
         "id": 1,
-        "image":"./img/lebron1.jpg"
+        "image":"../img/lebron1.jpg"
     },
     {
         "nombre": "Spalding Varsity Tf 150",
         "precio": 19000,
         "id": 2,
-        "image":"./img/pelota1.png"
+        "image":"../img/pelota1.png"
         
     },
     {
         "nombre": "Remera Nike Los Angeles Lakers",
         "precio": 16999,
         "id": 3,
-        "image":"./img/camiseta1B.jpg"
+        "image":"../img/camiseta1.jpg"
     },
     {
         "nombre": "Short Nike Miami Heat Swingman",
         "precio": 15399,
         "id": 4,
-        "image":"./img/short1C.jpg"
+        "image":"../img/short1C.jpg"
     },
     {
         "nombre": "Campera Nike Milwaukee Bucks",
         "precio": 32700,
         "id": 5,
-        "image":"./img/campera1.jpg"
+        "image":"../img/campera1.jpg"
     },
     {
         "nombre": "Buzo Adidas ONE BASKETBALL",
         "precio": 49999,
         "id": 6,
-        "image":"./img/buzo1B.jpg"
+        "image":"../img/buzo1B.jpg"
     },
     {
         "nombre": "XX",

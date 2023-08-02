@@ -266,6 +266,11 @@ body {
   cursor: pointer;
 }
 
+.contenedor-productos {
+  display: inline-flex;
+  align-items: center;
+}
+
 @media only screen and (max-width: 1024px) {
   .Bannerimg video {
     height: 500px !important;
@@ -513,4 +518,95 @@ body {
 
 .resumenprod {
   padding-right: 80px;
+}
+
+.carritomain {
+  height: auto !important;
+  margin-bottom: 100px;
+}
+
+.carritodiv {
+  display: flex;
+}
+
+.carrito-title {
+  margin-bottom: 40px;
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.carrito-title h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 32px;
+}
+.carrito-title p {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 24px;
+}
+
+.carrito-pago {
+  margin-left: 50px !important;
+  height: 180px !important;
+  width: 100%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.carrito-pago h2 {
+  font-size: 20px;
+}
+.carrito-pago h3 {
+  font-size: 30px;
+}
+.carrito-pago p {
+  font-size: 15px;
+}
+
+.carrito-items {
+  height: 180px !important;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.producto-item {
+  display: flex;
+}
+
+.producto-precio {
+  display: grid;
+  padding-top: 10px;
+  padding-left: 50px;
+  width: 250px !important;
+  font-weight: 700;
+}
+
+.producto-data {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.producto-data p {
+  padding-top: 10px;
+}
+
+.producto-foto {
+  margin-right: 20px;
+  background-size: cover !important;
+}
+.producto-foto img {
+  width: 175px;
+  height: auto;
+  padding: 2px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  background-position: center;
+  padding: 0;
+  margin-top: 2px;
+  margin-left: 20px;
+  height: 20px;
+  box-shadow: none !important;
+  border: none !important;
+}
+.btn:hover {
+  border: none !important;
+  box-shadow: none !important;
 }/*# sourceMappingURL=main.css.map */
