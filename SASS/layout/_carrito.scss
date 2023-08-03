@@ -1,8 +1,11 @@
 .carritomain{
-    height: auto !important;
+    height: 1500px  !important;
     margin-bottom: 100px;
 }
 
+.disabled{
+    display: none   !important;
+}
 
 
 .carritodiv{
@@ -11,7 +14,7 @@
 
 .carrito-title{
     margin-bottom: 40px;
-    padding-top: 40px;
+    padding-top: 110px;
     display: flex;
     justify-content: space-between;
 
@@ -48,18 +51,19 @@
 .carrito-items{
     height: 180px   !important;
     width: 100%;
-    border: 1px solid black;
 }
 
 
 .producto-item{
     display: flex;
+    margin-bottom: 20px;
 }
 
 .producto-precio{
     display: grid;
     padding-top: 10px;
-    padding-left: 50px;
+    justify-content: end;
+    margin-left: 50px;
     width: 250px !important;
     font-weight: 700;
 
@@ -77,8 +81,8 @@
     background-size: cover !important;
 
     img{
-        width: 175px;
-        height: auto;
+        width: 160px;
+        height: 180px;
         padding: 2px;
     }
 }

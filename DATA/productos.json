@@ -3,60 +3,49 @@
         "nombre": "Zapatillas Nike LeBron NXXT Gen",
         "precio": 88000,
         "id": 1,
-        "image":"../img/lebron1.jpg"
+        "image":"../img/lebron1.jpg",
+        "imagecart":"../img/lebron1cart.jpg",
+        "size":"10.5"
     },
     {
-        "nombre": "Spalding Varsity Tf 150",
+        "nombre": "Pelota N7 Spalding Varsity Tf 150",
         "precio": 19000,
         "id": 2,
-        "image":"../img/pelota1.png"
+        "image":"../img/pelota1.png",
+        "imagecart":"../img/pelota1cart.jpg",
+        "size":"7"
         
     },
     {
         "nombre": "Remera Nike Los Angeles Lakers",
         "precio": 16999,
         "id": 3,
-        "image":"../img/camiseta1.jpg"
+        "image":"../img/camiseta1.jpg",
+        "imagecart":"../img/camiseta1cart.jpg",
+        "size":"xs"
     },
     {
         "nombre": "Short Nike Miami Heat Swingman",
         "precio": 15399,
         "id": 4,
-        "image":"../img/short1C.jpg"
+        "image":"../img/short1C.jpg",
+        "imagecart":"../img/short1cart.jpg",
+        "size":"xs"
     },
     {
         "nombre": "Campera Nike Milwaukee Bucks",
         "precio": 32700,
         "id": 5,
-        "image":"../img/campera1.jpg"
+        "image":"../img/campera1.jpg",
+        "imagecart":"../img/campera1cart.jpg",
+        "size":"xs"
     },
     {
-        "nombre": "Buzo Adidas ONE BASKETBALL",
+        "nombre": "Buzo Adidas ONE BASKETBALL  ",
         "precio": 49999,
         "id": 6,
-        "image":"../img/buzo1B.jpg"
-    },
-    {
-        "nombre": "XX",
-        "precio": 16999,
-        "id": 7,
-        "image":"buzo1B.jpg"
-    },
-    {
-        "nombre": "XX",
-        "precio": 15399,
-        "id": 8,
-        "image":"buzo1B.jpg"
-    },
-    {
-        "nombre": "XX",
-        "precio": 32700,
-        "id": 9,
-        "image":"buzo1B.jpg"
-    },
-    {
-        "nombre": "XX",
-        "precio": 32700,
-        "id": 10
+        "image":"../img/buzo1B.jpg",
+        "imagecart":"../img/buzo1cart.jpg",
+        "size":"xs"
     }
 ]

@@ -46,33 +46,34 @@
                     style="position: absolute; top: 100%; left: 0; z-index: 999; background-color: rgba(255, 255, 255, 0.555); width: 300px; display: none;">
                 </div>
             </div>
-            <a href="../vistas/Carrito.html">
-                <button id="cartbutton" class="favbutton"><img src="../img/bag.svg" alt=""></button>
-            </a>
         </div>
     </nav>
 
     <!-- navbar - fin -->
-    <main class="carritomain container">
+    <main class="carritomain container" id="carritomain">
         <div class="carrito-title">
             <div>
                 <h2>TU CARRITO</h2>
-                <p class="preciofinal">$50000</p>
+                <p class="preciofinal disabled">$50000</p>
+                <p id="carrito-vacio" class="carrito-vacio">Tu carrito está vacío.</p>
             </div>
             <div>
-                <button class="buybutton" style="padding-right: 20px;">
+                <button id="btnbuy" class="buybutton disabled" style="padding-right: 20px;">
                     IR A PAGAR 
                     <svg style="margin-bottom:3px;margin-left:60px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
                     </svg>
+                </button>
+                <button id="btnlimpiar" class="buybutton disabled" style="background-color: brown;">
+                    Limpiar Carrito 
                 </button>
             </div>
             
         </div>
         <div class="carritodiv">
 
-            <div class="carrito-items col-8" style="padding: 0;">
-                <div class="producto-item">
+            <div id="carrito-productos" class="carrito-items col-8 disabled" style="padding: 0;">
+                <!-- <div class="producto-item">
                     <div class="producto-foto">
                         <img src="../img/buzo1.jpg" alt="">
                     </div>
@@ -93,18 +94,18 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
-            <div class="carrito-pago col-4" style="padding: 0;">
+            <div id="carrito-acciones" class="carrito-pago col-4 disabled" style="padding: 0;">
                 <h3>RESUMEN DEL PEDIDO</h3>
-                <p>1 Productos </p>
-                <h2>TOTAL : $49999</h2>
+                <p id="cantproductos"> </p>
+                <h2 id="total"></h2>
                 <p style="font-size: 13px;margin-bottom: 5px;margin-top:30px ;font-weight: lighter; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trzebuchet MS', sans-serif;">OPCIONES DE PAGO</p>
                 <img src="../img/metodospago.jpg" alt="">
             </div>
 
         </div>
-
+        <p id="carrito-comprado" class="carrito-comprado" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px;">MUCHAS GRACIA POR TU COMPRA</p>
     </main>
     <footer>
         <div class="footerdiv">
@@ -112,7 +113,8 @@
     </footer>
 
     <!--JS main-->
-    <script src="../JS/productos.js"></script>
+    <script src="../JS/carrito.js"></script>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
