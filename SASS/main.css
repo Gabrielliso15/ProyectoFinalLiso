@@ -377,6 +377,9 @@ body {
   border: 0;
   margin-bottom: 50px;
 }
+.buybuttonprod:hover {
+  filter: contrast(120%);
+}
 
 .resumenprod {
   padding-right: 80px;

@@ -74,7 +74,7 @@ function mostrarResultadosBusqueda(resultados) {
 
         const precioElemento = document.createElement('span');
         precioElemento.classList.add('precio-elemento');
-        precioElemento.textContent = '- $ ' + producto.precio.toFixed(2); 
+        precioElemento.textContent = '- $ ' + producto.precio.toFixed(2);
         infoElemento.appendChild(precioElemento);
 
         resultadoElemento.appendChild(infoElemento); // Agregar el contenedor de información al contenedor principal
@@ -94,7 +94,7 @@ let botonesAgregar = document.querySelectorAll(".buybuttonprod");
 
 let productosEnCarrito = [];
 
-// Declarar una variable global para almacenar los datos de productos
+// variable global para almacenar los datos de productos
 let productosData;
 
 // Función para cargar los productos desde "productos.json" utilizando una promesa
@@ -118,7 +118,7 @@ async function fetchProductos() {
 }
 
 
-// Funcion que actualiza el icono del carrito 
+// Funcion que actualiza el icono del carrito dependiendo si hay o no productos en el array carrito
 function actualizarIconoCarrito() {
     const iconoCarrito = document.querySelector('.favbutton img');
     if (productosEnCarrito.length > 0) {
@@ -143,22 +143,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function agregarAlCarrito(id) {
 
-    const idBoton = parseInt(id);// cada boton de agregar al carrito contiene el id del producto
+    Toastify({
+        text: "Producto Agregado",
+        duration: 2000,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: "#161A1D",
+            borderRadius: "55px",
+            textTransform: "uppercase",
+            fontFamily : "Arial Narrow",
+            fontWeight: "100",
+            fontSize: ".75rem"
+        },
+        offset: {
+            x: '1.2rem', // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+            y: '4.5rem' // vertical axis - can be a number or a string indicating unity. eg: '2em'
+        },
+        onClick: function () {} // Callback after click
+    }).showToast();
+
+    const idBoton = parseInt(id); // cada boton de agregar al carrito contiene el id del producto
     const productoAgregado = productosData.find(producto => producto.id === idBoton);
 
     // check si hay dos productos igules en el carrito para aumentar la cantidad del mismo
     if (productosEnCarrito.some(producto => producto.id === idBoton)) {
         const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
         productosEnCarrito[index].cantidad++;
-    } else {
+    } else {// si hay solo un roducto lo pushea al array
         productoAgregado.cantidad = 1;
         productosEnCarrito.push(productoAgregado);
     }
-
+    // actualiza el sessionstorage
     sessionStorage.setItem('carrito', JSON.stringify(productosEnCarrito));
 
     actualizarIconoCarrito();
     // console.log check
-    console.log(productosEnCarrito);
+    // console.log(productosEnCarrito);
 
 }

@@ -108,7 +108,11 @@ let botonesEliminar = document.querySelectorAll('btn');
 const BtnPagar = document.getElementById('btnbuy');
 const BtnLimpiar = document.getElementById('btnlimpiar');
 
-function CargarProductosEnCarrito(){
+
+// Esta funcion carga los productos del carrito en el DOM
+// Si hay productos en el carrito los muestra con sus detalles y botones de eliminacion
+// Si no hay productos muestra el mensaje de "carrito vacío"
+function CargarProductosEnCarrito() {
 
     ContenedorCarritoProductos.innerHTML = '';
 
@@ -119,9 +123,9 @@ function CargarProductosEnCarrito(){
         ContenedorCarritoComprado.classList.add("disabled");
         BtnLimpiar.classList.remove("disabled");
         BtnPagar.classList.remove("disabled");
-    
+
         productosEnCarrito.forEach(producto => {
-    
+
             const div = document.createElement("div");
             div.classList.add("carrito-productos");
             div.innerHTML = `
@@ -149,10 +153,10 @@ function CargarProductosEnCarrito(){
                         </div>
                     </div>
                 </div>`;
-    
-                ContenedorCarritoProductos.append(div);
+
+            ContenedorCarritoProductos.append(div);
         });
-    
+
     } else {
         ContenedorCarritoVacio.classList.remove("disabled");
         ContenedorCarritoProductos.classList.add("disabled");
@@ -172,15 +176,41 @@ CargarProductosEnCarrito();
 
 
 function ActualizarBotonesEliminar() {
-    botonesEliminar = document.querySelectorAll('.btn'); 
+    botonesEliminar = document.querySelectorAll('.btn');
 
     botonesEliminar.forEach(boton => {
-        boton.addEventListener("click",eliminarDelCarrito);
+        boton.addEventListener("click", eliminarDelCarrito);
     });
 
 }
 
+
+// Esta funcion elimina un producto del carrito cuando se hace clic en el boton de eliminar.
 function eliminarDelCarrito(e) {
+
+    Toastify({
+        text: "Producto Eliminado",
+        duration: 2000,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: "brown",
+            borderRadius: "55px",
+            textTransform: "uppercase",
+            fontFamily: "Arial Narrow",
+            fontWeight: "100",
+            fontSize: ".75rem"
+        },
+        offset: {
+            x: '1.2rem', // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+            y: '4.5rem' // vertical axis - can be a number or a string indicating unity. eg: '2em'
+        },
+        onClick: function () {} // Callback after click
+    }).showToast();
+
+
+
     const idBoton = +e.currentTarget.id;
     const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
 
@@ -189,9 +219,9 @@ function eliminarDelCarrito(e) {
         if (productosEnCarrito[index].cantidad > 1) {
             // Si la cantidad del producto es mayor a 1 reducimos la cantidad en 1
             productosEnCarrito[index].cantidad--;
-        }else {
+        } else {
             // Si la cantidad es igual a 1, eliminamos el producto completamente del carrito
-            productosEnCarrito.splice(index,1);
+            productosEnCarrito.splice(index, 1);
         }
         sessionStorage.setItem('carrito', JSON.stringify(productosEnCarrito));
 
@@ -199,21 +229,52 @@ function eliminarDelCarrito(e) {
     }
 }
 
-botonVaciar.addEventListener("click", vaciarCarrito); 
 
-function vaciarCarrito(){
 
-    productosEnCarrito.length = 0;
-    sessionStorage.setItem('carrito', JSON.stringify(productosEnCarrito));
-    CargarProductosEnCarrito();
+
+botonVaciar.addEventListener("click", vaciarCarrito);
+
+function vaciarCarrito() {
+
+    Swal.fire({
+        title: '¿Estás Seguro?',
+        // text: "Se eliminaran todos tus productos.",
+        text: `Se eliminaran ${productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0)} productos`,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si,Borrar todo!',
+        cancelButtonText: 'Cancelar',
+        confirmButtonColor: '#3ec300'
+
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire(
+                'Tu carrito esta vacio!',
+                'Todos los productos fueron eliminados',
+                'success'
+            )
+            productosEnCarrito.length = 0;
+            sessionStorage.setItem('carrito', JSON.stringify(productosEnCarrito));
+            CargarProductosEnCarrito();
+        }
+    })
+
+
 
 }
 
-function ActualizarTotal (){
+
+// Esta función actualiza el total de la compra, calculando el precio total de todos los productos en el carrito.
+// Luego actualiza el elemento en el DOM que muestra el total.
+
+function ActualizarTotal() {
     const total = productosEnCarrito.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0);
     Total.innerText = 'TOTAL : $' + total;
 }
 
+// Esta función actualiza el contador que muestra la cantidad total de productos en el carrito.
 function ActualizarCantProductos() {
     const cantidadProductos = productosEnCarrito.reduce((total, producto) => total + producto.cantidad, 0);
     const cantproductosElemento = document.getElementById('cantproductos');
@@ -221,18 +282,27 @@ function ActualizarCantProductos() {
 }
 
 
-botonComprar.addEventListener("click", ComprarCarrito); 
+// Muestra un mensaje de compra confirmada y deshabilita los botones y elementos que se encuentren en el html
 
-function ComprarCarrito(){
+botonComprar.addEventListener("click", ComprarCarrito);
+
+function ComprarCarrito() {
+
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Tu compra fue confirmada con exito!',
+        showConfirmButton: false,
+        timer: 1500
+    })
 
     productosEnCarrito.length = 0;
     sessionStorage.setItem('carrito', JSON.stringify(productosEnCarrito));
-        ContenedorCarritoVacio.classList.add("disabled");
-        ContenedorCarritoProductos.classList.add("disabled");
-        ContenedorCarritoAcciones.classList.add("disabled");
-        ContenedorCarritoComprado.classList.remove("disabled");
-        BtnLimpiar.classList.add("disabled");
-        BtnPagar.classList.add("disabled");
+    ContenedorCarritoVacio.classList.add("disabled");
+    ContenedorCarritoProductos.classList.add("disabled");
+    ContenedorCarritoAcciones.classList.add("disabled");
+    ContenedorCarritoComprado.classList.remove("disabled");
+    BtnLimpiar.classList.add("disabled");
+    BtnPagar.classList.add("disabled");
 
 }
-

@@ -112,7 +112,7 @@
 
 .buybuttonprod{
     
-    background-color: #161A1D;;
+    background-color: #161A1D;
     color: white;
     padding: 12px 70px 12px 70px;
     border-radius: 20px;
@@ -120,6 +120,10 @@
     font-weight: 620;
     border: 0;
     margin-bottom: 50px;
+
+    &:hover{
+        filter: contrast(120%);
+    }
 }
 
 .resumenprod{

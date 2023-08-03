@@ -134,7 +134,7 @@ function mostrarResultadosBusqueda(resultados) {
 
 
 
-// Cargando array de productos destacados : 
+// Cargando array de productos destacados :  
 
 const ProductosDestacados =[
     {
@@ -165,14 +165,13 @@ const ProductosDestacados =[
 ];
 
 
-
+// Construccion de los productos destacados 
 const contenedorProductos = document.querySelector('#contenedor-productos');
 
 
 function CargarProductos() {
 
     ProductosDestacados.forEach(producto => {
-        // Construccion de los productos destacados 
         const div = document.createElement('div');
         div.classList.add('producto');
         div.innerHTML = ` 
